@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Details</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="dtstyle.css">
+    <link rel="stylesheet" href="hpstyle.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the DogHub</h1>
+        <p>Find your perfect furry friend today!</p>
+    </header>
+    <nav>
+        <input type="text" class="Search-Bar" placeholder="Search for dogs...">
+        <button class="search-btn"><i class='bx bx-search'></i></button>
+        <a href="/homepage" class="nav-btn">Home</a>
+        <a href="#" class="nav-btn">Donation</a>
+        <a href="#" class="nav-btn">About us</a>
+        <a href="/Approval-Status" class="nav-btn">Approval Status</a>
+    </nav>
+    
+    <div class="slider-container">
+        <div class="slider">
+            <img src="pic/dog1.jpg" alt="Monser" class="slide">
+            <img src="pic/pug.jpg" alt="Monser" class="slide">
+            <img src="pic/pug2.jpg" alt="Monser" class="slide">
+            <img src="pic/pug3.jpg" alt="Monser" class="slide">
+            <img src="pic/pug4.jpg" alt="Monser" class="slide">
+            <img src="pic/pug5.jpg" alt="Monser" class="slide">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+    <div class="details">
+        <h1 style="color: #005abb;">Monser</h1>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Breed:</strong> Pug</p>
+        <p><strong>Color:</strong> Fawn</p>
+        <p><strong>Health Status:</strong> Healthy</p>
+        <p><strong>Blood Type:</strong> DEA 1.1 Positive</p>
+        <p><strong>Medical History:</strong> Vaccinated, No prior surgeries</p>
+        <p><strong>History:</strong> The stray dog came from a busy city, where he roamed the streets, alleys, and parks, searching for food and shelter.</p>
+        <a href="/appointment" class="adopt-btn">Adopt Me</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 DogHub. All rights reserved.</p>
+    </footer>
+
+    <script src="slider.js"></script>
+</body>
+</html>

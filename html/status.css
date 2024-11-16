@@ -1,0 +1,44 @@
+.approval-status-container{
+    margin-bottom: 105.7px;
+}
+
+#status-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.status-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.status-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.status-table td:first-child {
+    width: 150px;
+    font-weight: bold;
+}
+
+.status-table td:last-child {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#status {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+i.bx {
+    margin-left: 10px;
+}

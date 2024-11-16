@@ -1,0 +1,56 @@
+.container {
+    max-width: 600px;
+    margin: 191.9px auto;
+    padding: 20px 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px solid #005abb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+.container h1 {
+    font-size: 28px;
+    color: #005abb;
+    margin-bottom: 15px;
+}
+
+.container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.button {
+    background-color: #005abb;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #005abbc5;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    background-color: #005abb70;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

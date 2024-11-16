@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+img{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.slider-container {
+    margin: 0;
+    padding: 10px;
+    background-color: #33333352;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #005abb70;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #005abbc5;
+}
+
+.details {
+    padding: 25px 30px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top: 3px solid #005abb;
+}
+
+.details h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+
+.details p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.details .adopt-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #005abb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.details .adopt-btn:hover {
+    background-color: #00498c;
+    transform: scale(1.05);
+}
+
+.details .adopt-btn:active {
+    transform: scale(1);
+}

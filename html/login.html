@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the DogHub</h1>
+    </header>
+    <div class="login-container">
+        <h2 style="color: #005abb;">Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="invalid">
+            <p id="invalid-text" style="color: brown;"></p>
+        </div>
+        <div class="signup-link">
+            <p>Don't have an account? <a href="/registration">Sign Up</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

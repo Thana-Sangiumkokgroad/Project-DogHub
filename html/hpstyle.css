@@ -1,0 +1,205 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+.dog-card {
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: hidden;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.dog-card:hover {
+    transform: scale(1.05);
+}
+.dog-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+.dog-card h3 {
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 0;
+    text-align: center;
+}
+.dog-card p {
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.dog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Search-Bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.Search-Bar:focus{
+    border-color: #005abb;
+    transition: all 0.3s ease;
+}
+
+input[type=text].Search-Bar {
+    width: 250px;
+    transition: width .35s ease-in-out;
+  }
+  
+input[type=text].Search-Bar:focus {
+    width: 300px;
+  }
+
+.search-btn {
+    background-color: #005abb;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #005abbc5;
+}
+
+.search-btn:active {
+    background-color: #005abb70;
+}
+
+.search-btn i {
+    font-size: 20px;
+    color: white;
+}
+.nav-btn {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #005abbc5;
+    color: white;
+    border-color: #005abb;
+}
+
+.nav-btn:active {
+    background-color: #005abb70;
+}
+
+.adopt-btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #005abb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.adopt-btn:hover {
+    background-color: #005abbc5;
+}
+
+.adopt-btn:active {
+    background-color: #005abb70;
+}
+.sponsors-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sponsors-section h2 {
+    font-size: 28px;
+    color: #005abb;
+    margin-bottom: 10px;
+}
+
+.sponsors-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sponsor-logos img {
+    border-radius: 10px;
+    max-width: 250px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .dog-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dog-card {
+        width: 90%;
+    }
+}
