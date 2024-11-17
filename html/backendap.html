@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Approval Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card h3 {
+            margin: 0;
+            color: #343a40;
+        }
+        .card p {
+            color: #6c757d;
+            margin: 5px 0;
+        }
+        .card .btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            color: white;
+            background-color: #005abb;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .card .btn.approve:hover{
+            background-color: #004085b9;
+        }
+        .btn.reject:hover {
+            background-color: #9e0010a8;
+        }
+        .card .btn.approve:active{
+            background-color: #004085;
+        }
+        .btn.reject:active {
+            background-color: #9e0010;
+        }
+        .btn.reject {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Admin Panel</h1>
+        <p>Manage requests</p>
+    </header>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="pic/dog1.jpg" alt="Request 1">
+            <div class="card-content">
+                <h3>Request #001</h3>
+                <p>Name: Monser</p>
+                <p>User: Thana Sangiumkokgroad</p>
+                <p>Email: prameprolo123@gmail.com</p>
+                <p>Tel: 0967908686</p>
+                <button class="btn approve">Approve</button>
+                <button class="btn reject">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get all "Approve" and "Reject" buttons
+        const approveButtons = document.querySelectorAll('.btn.approve');
+        const rejectButtons = document.querySelectorAll('.btn.reject');
+
+        // Add event listeners to "Approve" buttons
+        approveButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                alert("Request has been approved")
+                const card = button.closest('.card'); // Find the parent card
+                card.remove(); // Remove the card from the DOM
+            });
+        });
+
+        // Add event listeners to "Reject" buttons
+        rejectButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                alert("Request has been rejected")
+                const card = button.closest('.card'); // Find the parent card
+                card.remove(); // Remove the card from the DOM
+            });
+        });
+    </script>
+</body>
+</html>
