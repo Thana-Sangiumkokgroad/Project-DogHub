@@ -124,21 +124,38 @@
     </nav>
 
     <div class="card-container">
-        <div class="card">
-            <img src="pic/dog1.jpg" alt="Request 1">
-            <div class="card-content">
-                <h3>Request #001</h3>
-                <p>Name: Monser</p>
-                <p>User: Thana Sangiumkokgroad</p>
-                <p>Email: prameprolo123@gmail.com</p>
-                <p>Tel: 0967908686</p>
-                <button class="btn approve">Approve</button>
-                <button class="btn reject">Reject</button>
+        <!-- Loop through the dogs data passed from the backend -->
+        <% dogs.forEach(dog => { %>
+            <div class="card">
+                <img src="<%= dog.imageUrl %>" alt="<%= dog.name %>">
+                <div class="card-content">
+                    <h3>User #<%= dog.user %></h3>
+                    <p class="email">Email: <%= dog.email %></p>
+                    <p>Dog Name: <%= dog.name %></p>
+                    <p>Age: <%= dog.age %></p>
+                    <p>Breed: <%= dog.breed %></p>
+                    <p>Color: <%= dog.color %></p>
+                    <p>Health Status: <%= dog.health_status %></p>
+                    <p>Blood Type: <%= dog.blood_type %></p>
+                    <button class="btn approve" onclick="Appove()">Approve</button>
+                    <button class="btn reject" onclick="Appove()">Reject</button>
+                </div>
             </div>
-        </div>
+        <% }) %>
     </div>
 
     <script>
+        function Appove(){
+            const emailElement = document.querySelector('.email');
+            const email_text = emailElement.textContent.trim();  // Get the email from the <p> tag
+            email = email_text.split(" ");
+            fetch(`Appove/${email[1]}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        }
         // Get all "Approve" and "Reject" buttons
         const approveButtons = document.querySelectorAll('.btn.approve');
         const rejectButtons = document.querySelectorAll('.btn.reject');
@@ -146,7 +163,7 @@
         // Add event listeners to "Approve" buttons
         approveButtons.forEach(button => {
             button.addEventListener('click', function () {
-                alert("Request has been approved")
+                alert("Request has been approved");
                 const card = button.closest('.card'); // Find the parent card
                 card.remove(); // Remove the card from the DOM
             });
@@ -155,7 +172,7 @@
         // Add event listeners to "Reject" buttons
         rejectButtons.forEach(button => {
             button.addEventListener('click', function () {
-                alert("Request has been rejected")
+                alert("Request has been rejected");
                 const card = button.closest('.card'); // Find the parent card
                 card.remove(); // Remove the card from the DOM
             });

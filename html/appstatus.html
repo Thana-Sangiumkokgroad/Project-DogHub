@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Approval Status</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="hpstyle.css">
-    <link rel="stylesheet" href="status.css">
+    <link rel="stylesheet" href="/html/hpstyle.css">
+    <link rel="stylesheet" href="/html/status.css">
 </head>
 <body>
     <header>
@@ -14,11 +14,14 @@
         <p>Find your perfect furry friend today!</p>
     </header>
     <nav>
-        <input type="text" class="Search-Bar" placeholder="Search for dogs...">
-        <button class="search-btn"><i class='bx bx-search'></i></button>
+        <form action="/search" method="get">
+            <input id="search" type="text" class="Search-Bar" placeholder="Search for dogs..." name="query">
+            <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+        </form>
         <a href="/homepage" class="nav-btn">Home</a>
         <a href="#" class="nav-btn">Donation</a>
         <a href="#" class="nav-btn">About us</a>
+        <a href="/login" class="nav-btn">Login</a>
     </nav>
     <div class="approval-status-container">
         <h2>Approval Status</h2>

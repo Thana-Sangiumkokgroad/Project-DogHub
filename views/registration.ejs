@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="/html/loginstyle.css">
 </head>
 <body>
     <header>
@@ -12,7 +12,7 @@
     </header>
     <div class="login-container">
         <h2 style="color: #005abb;">Registration</h2>
-        <form id="RegistrationForm">
+        <form action="/regis" method="POST" id="RegistrationForm" onsubmit="return regis()">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -35,5 +35,21 @@
         </div>
     </div>
     <script src="registration.js"></script>
+
+    <script>
+        function regis() {
+            // Get the password and confirm password values
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('conpassword').value;
+
+            // Check if they match
+            if (password !== confirmPassword) {
+                // If passwords don't match, show an alert and prevent form submission
+                document.getElementById('invalid-text').innerText = "Passwords do not match!";
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
 </body>
 </html>

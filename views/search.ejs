@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/html/hpstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the DogHub</h1>
+        <p>Find your perfect furry friend today!</p>
+    </header>
+    <nav>
+        <form action="/search" method="get">
+            <input id="search" type="text" class="Search-Bar" placeholder="Search for dogs..." name="query">
+            <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+        </form>
+        <a href="#" class="nav-btn">Donation</a>
+        <a href="#" class="nav-btn">About us</a>
+        <a href="/Approval-Status" class="nav-btn">Approval Status</a>
+        <a href="/login" class="nav-btn">Login</a>
+    </nav>
+    <div class="container">
+    <section class="dog-grid">
+        <% if (dogs && dogs.length > 0) { %>
+            <% dogs.forEach(dog => { %>
+                <div class="dog-card">
+                    <img src="<%=dog.imageUrl%>" alt="<%= dog.name %>">
+                    <h3><%= dog.name %></h3>
+                    <p>Age: <%= dog.age %> years</p>
+                    <p>Breed: <%= dog.breed %></p>
+                    <a href="/detail/<%= dog.id %>" style="color: darkgrey;"><p>More details...</p></a>
+                    <a href="/detail/<%= dog.id %>" class="adopt-btn">Adopt Me</a>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No dogs available at the moment.</p>
+        <% } %>
+    </section>
+    </div>
+    <section class="sponsors-section">
+        <h2>Our Proud Sponsors</h2>
+        <p>We are grateful for the support of our generous sponsors who help us make a difference.</p>
+        <div class="sponsor-logos">
+            <img src="html/pic/logo1.jpg" alt="Sponsor 1 Logo">
+            <img src="html/pic/logo2.webp" alt="Sponsor 2 Logo">
+            <img src="html/pic/logo3.jpg" alt="Sponsor 3 Logo">
+            <img src="html/pic/logo4.png" alt="Sponsor 4 Logo">
+        </div>
+    </section>
+    
+</div>
+<footer>
+    <p>&copy; 2024 DogHub. All rights reserved.</p>
+</footer>
+</body>
+</html>

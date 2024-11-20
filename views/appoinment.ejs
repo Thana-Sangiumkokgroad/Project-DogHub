@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointment Page</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="hpstyle.css">
+    <link rel="stylesheet" href="/html/hpstyle.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -84,17 +84,20 @@
         <p>Find your perfect furry friend today!</p>
     </header>
     <nav>
-        <input type="text" class="Search-Bar" placeholder="Search for dogs...">
-        <button class="search-btn"><i class='bx bx-search'></i></button>
+        <form action="/search" method="get">
+            <input id="search" type="text" class="Search-Bar" placeholder="Search for dogs..." name="query">
+            <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+        </form>
         <a href="/homepage" class="nav-btn">Home</a>
         <a href="#" class="nav-btn">Donation</a>
         <a href="#" class="nav-btn">About us</a>
         <a href="/Approval-Status" class="nav-btn">Approval Status</a>
+        <a href="/login" class="nav-btn">Login</a>
     </nav>
     <div class="container">
         <h1 class="apptil">Book an Appointment</h1>
 
-        <form onsubmit="event.preventDefault(); window.location.href='/appointment-status';">
+        <form action="/appointment-status/<%= dog.id%>" method="POST">
 
             <div class="form-group">
                 <label for="name">Full Name</label>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="/html/loginstyle.css">
 </head>
 <body>
     <header>
@@ -12,7 +12,7 @@
     </header>
     <div class="login-container">
         <h2 style="color: #005abb;">Login</h2>
-        <form id="loginForm">
+        <form action="/userlogin" method="POST" id="loginForm">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -21,6 +21,22 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
+            <% try {%>
+                <%if (passcheck){%>
+                    <%console.log(passcheck[0])%>
+                <% if (passcheck[0].length > 0) {%>
+                    <script>
+                    alert("Login succesfuly !")
+                    window.location.replace("homepage") 
+                    </script>
+                <%}else{%>
+                    <label style="color: red;">Wrong password! try again</label>
+                <%}%>
+                <%}%>
+
+            <%}catch(err){%>
+
+            <%}%>
             <button type="submit" class="login-btn">Login</button>
         </form>
         <div class="invalid">

@@ -65,7 +65,7 @@ nav {
 .Search-Bar {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border-radius: 50px;
     outline: none;
     font-size: 16px;
     transition: all 0.3s ease;
@@ -90,12 +90,9 @@ input[type=text].Search-Bar:focus {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    border-radius: 0 5px 5px 0;
+    border-radius: 50px;
     color: white;
     font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: background-color 0.3s;
 }
 

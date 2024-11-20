@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= dog.name %> Details</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/html/dtstyle.css">
+    <link rel="stylesheet" href="/html/hpstyle.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the DogHub</h1>
+        <p>Find your perfect furry friend today!</p>
+    </header>
+    <nav>
+        <form action="/search" method="get">
+            <input id="search" type="text" class="Search-Bar" placeholder="Search for dogs..." name="query">
+            <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+        </form>
+        <a href="/homepage" class="nav-btn">Home</a>
+        <a href="#" class="nav-btn">Donation</a>
+        <a href="#" class="nav-btn">About us</a>
+        <a href="/approval-status" class="nav-btn">Approval Status</a>
+        <a href="/login" class="nav-btn">Login</a>
+    </nav>
+    
+    <div class="slider-container">
+        <div class="slider">
+                    <img src="<%= dog.imageUrl %>" alt="<%= dog.imageUrl %>" class="slide">
+        </div>
+    </div>
+    
+    <div class="details">
+        <h1 style="color: #005abb;"><%= dog.name %></h1>
+        <p><strong>Age:</strong> <%= dog.age %> years</p>
+        <p><strong>Breed:</strong> <%= dog.breed %></p>
+        <p><strong>Color:</strong> <%= dog.color %></p>
+        <p><strong>Health Status:</strong> <%= dog.health_status %></p>
+        <p><strong>Blood Type:</strong> <%= dog.blood_type %></p>
+        <p><strong>Medical History:</strong> <%= dog.medical_history %></p>
+        <p><strong>History:</strong> <%= dog.history %></p>
+        <a href="/appointment/<%= dog.id %>" class="adopt-btn">Adopt Me</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 DogHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
